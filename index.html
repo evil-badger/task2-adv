@@ -14,7 +14,55 @@
         <p class="backend starColor">Нужно просто просмотреть код - там будет очень много интересностей</p> 
         <p class="newHorizons starColor">Любопытство и желание увидеть невидимое открывает новые горизонты</p> 
         <p class="universe starColor">Именно поэтому телескоп J.WEBB был построен, потому что познание вселенной бесценно</p>
+        <button class="myButton" onclick="math()">Результаты операций + - * / на 2 </button>
+        <button class="myButton" onclick="length()">Определить длинну строки</button>
+        <button class="myButton" onclick="rounding()">Округлить и добавить</button>
+        <button class="myButton" onclick="coincidence()">С какого символа строки совпадают?</button>
+        <button class="myButton" onclick="up()">ДОБАВИТЬ ЗАГЛАВНЫЙ РЕГИСТР!</button>
     </div>
 
+    <script>
+        function math(){
+            const digit = parseInt(prompt('Хотите магию? Введите число. Так нужно. Любое. Да.'));
+            let addition=digit+2;
+            let minus=digit-2;
+            let division=digit/2;
+            let multiplication=digit*2;
+            alert(`Исходное число ${digit}, сумма ${addition}, разница ${minus}, деление ${division}, умножение ${multiplication}`);
+            console.log(`Исходное число ${digit}, сумма ${addition}, разница ${minus}, деление ${division}, умножение ${multiplication}`);
+        }
+
+        function length(){
+            let myString=prompt('Здесь можно написать все что хочется высказать. Но ругаться все же не стоит.');
+            let line=myString.length;
+            alert(`Длинна строки равна ${line} символов`);
+            console.log(`Длинна строки равна ${line} символов`);
+        }
+      
+        function rounding(){
+            const digit=0.51000002;
+            let rounding=parseFloat(digit.toFixed(3));
+            let sum=rounding+2;
+            alert(`Исходное число ${digit}, после округления до сотой доли и плюс 2 результат ${sum}`);
+            console.log(`Исходное число ${digit}, после округления до сотой доли и плюс 2 результат ${sum}`);        
+        }
+
+        function coincidence(){
+            const str = 'the quick brown fox jumps over the lazy dogs back';
+            const str_two = 'brown fox jumps';
+            let symbol=str.indexOf(str_two);
+            alert(`Подстрока входит в строку с ${symbol} символа`);
+            console.log(`Подстрока входит в строку с ${symbol} символа`);
+        }
+
+        function up(){
+            const str = 'the quick brown fox jumps over the lazy dogs back';
+            const str_two = 'brown fox jumps';
+            let up=str_two.toUpperCase()
+            alert(up);
+            console.log(up); 
+        }
+
+    </script>
 </body>
 </html>
