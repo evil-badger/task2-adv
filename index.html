@@ -15,6 +15,7 @@
         <p class="newHorizons starColor">Любопытство и желание увидеть невидимое открывает новые горизонты</p> 
         <p class="universe starColor">Именно поэтому телескоп J.WEBB был построен, потому что познание вселенной бесценно</p>
         <div class="grid">
+            <button class="myButton" onclick="digitConvert()">Преобразование систем счисления </button>
             <button class="myButton" onclick="math()">Результаты операций + - * / на 2 </button>
             <button class="myButton" onclick="length()">Определить длинну строки</button>
             <button class="myButton" onclick="rounding()">Округлить и добавить</button>
@@ -27,6 +28,17 @@
     </div>
 
     <script>
+          function digitConvert(){
+            const digit = 255;
+            const digit2=3242;
+            console.log(digit);
+            console.log(digit.toString(2));  
+            console.log(digit.toString(16)); 
+            console.log(digit2);
+            console.log(digit2.toString(2)); 
+            console.log(digit2.toString(16));  
+        }
+
         function math(){
             const digit = parseInt(prompt('Хотите магию? Введите число. Так нужно. Любое. Да.'));
             let addition=digit+2;
@@ -40,8 +52,8 @@
         function length(){
             let myString=prompt('Здесь можно написать все что хочется высказать. Но ругаться все же не стоит.');
             let line=myString.length;
-            alert(`Длинна строки равна ${line} символов`);
-            console.log(`Длинна строки равна ${line} символов`);
+            alert(`Длинна строки ${myString} равна ${line} символов`);
+            console.log(`Длинна строки ${myString} равна ${line} символов`);
         }
       
         function rounding(){
@@ -56,16 +68,16 @@
             const str = 'the quick brown fox jumps over the lazy dogs back';
             const str_two = 'brown fox jumps';
             let symbol=str.indexOf(str_two);
-            alert(`Подстрока входит в строку с ${symbol} символа`);
-            console.log(`Подстрока входит в строку с ${symbol} символа`);
+            alert(`Подстрока ${str_two} входит в строку ${str} с ${symbol} символа`);
+            console.log(`Подстрока ${str_two} входит в строку ${str} с ${symbol} символа`);
         }
 
         function up(){
             const str = 'the quick brown fox jumps over the lazy dogs back';
             const str_two = 'brown fox jumps';
             let up=str_two.toUpperCase()
-            alert(up);
-            console.log(up); 
+            alert(`${str_two} \n${up}`);
+            console.log(`${str_two} \n${up}`);
         }
 
         function compare(){
