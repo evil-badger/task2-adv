@@ -14,11 +14,16 @@
         <p class="backend starColor">Нужно просто просмотреть код - там будет очень много интересностей</p> 
         <p class="newHorizons starColor">Любопытство и желание увидеть невидимое открывает новые горизонты</p> 
         <p class="universe starColor">Именно поэтому телескоп J.WEBB был построен, потому что познание вселенной бесценно</p>
-        <button class="myButton" onclick="math()">Результаты операций + - * / на 2 </button>
-        <button class="myButton" onclick="length()">Определить длинну строки</button>
-        <button class="myButton" onclick="rounding()">Округлить и добавить</button>
-        <button class="myButton" onclick="coincidence()">С какого символа строки совпадают?</button>
-        <button class="myButton" onclick="up()">ДОБАВИТЬ ЗАГЛАВНЫЙ РЕГИСТР!</button>
+        <div class="grid">
+            <button class="myButton" onclick="math()">Результаты операций + - * / на 2 </button>
+            <button class="myButton" onclick="length()">Определить длинну строки</button>
+            <button class="myButton" onclick="rounding()">Округлить и добавить</button>
+            <button class="myButton" onclick="coincidence()">С какого символа строки совпадают?</button>
+            <button class="myButton" onclick="up()">ДОБАВИТЬ ЗАГЛАВНЫЙ РЕГИСТР!</button>
+            <button class="myButton" onclick="compare()">Сравнить числа</button>
+            <button class="myButton" onclick="typeCompare()">Различия между == и ===</button>
+            <button class="myButton" onclick="empty()">Продемонстрируйте работу оператора ??</button>
+        </div>
     </div>
 
     <script>
@@ -62,6 +67,30 @@
             alert(up);
             console.log(up); 
         }
+
+        function compare(){
+            let a = 1, b = 2, c = 3, d = 3, e=3;
+            console.log((a==c||c==b)||(b==c||c==c)||(c==c||c==d));
+            console.log((a<c&&c>b)&&(b<c&&c==c)&&(c==c&&c==d));
+        }
+
+        function empty(){
+            let a;
+            console.log(a??"it's an undefined result");
+            a=5;
+            console.log(a??"it's an undefined result");
+
+            let c=null;
+            console.log(c??"it's a null result");
+            c=NaN;
+            console.log(c??"it's a null result");
+        }
+
+        function typeCompare(){
+            console.log(1=='1');
+            console.log(1==='1');
+        }
+
 
     </script>
 </body>
